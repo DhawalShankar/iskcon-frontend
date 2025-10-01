@@ -5,7 +5,12 @@ export default function ISKCONWebsite() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeCity, setActiveCity] = useState(0);
-
+  const images = [
+  '/xpression.jpg',
+  '/image2.jpg',
+  '/image3.jpg',
+  // Add your image paths here
+];
   const cities = [
     { name: 'Kanpur', color: 'from-orange-500 to-pink-500' },
     { name: 'Orai', color: 'from-blue-500 to-green-500' },
@@ -14,20 +19,29 @@ export default function ISKCONWebsite() {
     { name: 'Prayagraj', color: 'from-orange-500 to-blue-500' },
     { name: 'Gorakhpur', color: 'from-pink-500 to-green-500' }
   ];
+  
+  const [index, setIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval); // Clean up on component unmount
+  }, []);
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveCity((prev) => (prev + 1) % cities.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-blue-50">
       {/* Navigation */}
@@ -35,9 +49,14 @@ export default function ISKCONWebsite() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-500 rounded-full flex items-center justify-center">
-                <Heart className="text-white" fill="white" />
-              </div>
+            
+                <img
+  src="easy-logo.png" 
+  alt="Easy Logo"
+  className="h-20 w-60 object-contain"
+/>
+
+              
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">
                   ISKCON EASY
@@ -106,8 +125,13 @@ export default function ISKCONWebsite() {
               <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-pink-400 rounded-3xl transform rotate-6 opacity-20"></div>
               <div className="relative bg-white rounded-3xl shadow-2xl p-8 space-y-6">
                 <div className="aspect-square bg-gradient-to-br from-orange-100 via-pink-100 to-blue-100 rounded-2xl flex items-center justify-center">
-                  <Sparkles size={120} className="text-orange-500" strokeWidth={1.5} />
-                </div>
+  <img
+    src={images[index]}
+    alt="Changing visual"
+    className="w-full h-full object-cover rounded-2xl"
+  />
+</div>
+
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">Our Presence</h3>
                   <div className="flex flex-wrap justify-center gap-2">
