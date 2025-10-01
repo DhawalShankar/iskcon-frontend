@@ -40,7 +40,7 @@ export default function ISKCONWebsite() {
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">
-                  ISKCON Movement
+                  ISKCON EASY
                 </h1>
                 <p className="text-xs text-gray-600">Sri Sri Radha Madhav Temple</p>
               </div>
@@ -230,7 +230,7 @@ export default function ISKCONWebsite() {
       </section>
 
       {/* Cities Section */}
-      <section id="centers" className="py-20 bg-white">
+<section id="centers" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -247,20 +247,16 @@ export default function ISKCONWebsite() {
                 key={city.name}
                 className="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-gray-100"
               >
-                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${city.color} opacity-10 rounded-bl-full`}></div>
+                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${city.color} opacity-10 rounded-bl-full pointer-events-none`}></div>
                 <MapPin className={`w-12 h-12 mb-4 text-orange-500`} />
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">{city.name}</h3>
                 <p className="text-gray-600 mb-4">Skill Training & Spiritual Center</p>
-                <div className="flex items-center text-orange-600 font-semibold group-hover:translate-x-2 transition-transform">
-                  <span>Explore Center</span>
-                  <ChevronRight size={20} />
-                </div>
+                
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Xpression Youth Fest */}
       <section id="xpression" className="py-20 bg-gradient-to-br from-pink-100 via-orange-50 to-blue-100 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -304,7 +300,7 @@ export default function ISKCONWebsite() {
                   <div className="w-56 h-56 mx-auto bg-white rounded-full flex items-center justify-center mb-6 shadow-2xl">
                     <Users size={120} className="text-orange-500" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-800 mb-2">10,000+</h3>
+                  <h3 className="text-3xl font-bold text-gray-800 mb-2">100,000+</h3>
                   <p className="text-gray-700 text-lg">Youth Participants</p>
                 </div>
               </div>
@@ -327,8 +323,8 @@ export default function ISKCONWebsite() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: Phone, title: 'Call Us', info: '+91 XXX XXX XXXX' },
-              { icon: Mail, title: 'Email Us', info: 'info@iskconkanpur.org' },
+              { icon: Phone, title: 'Call Us', info: '+91 7080007011' },
+              { icon: Mail, title: 'Email Us', info: 'info@iskconeasy.com' },
               { icon: MapPin, title: 'Visit Us', info: 'Radha Madhav Temple, Kanpur' }
             ].map((contact, idx) => (
               <div key={idx} className="bg-gradient-to-br from-orange-50 to-pink-50 rounded-2xl p-8 text-center hover:shadow-xl transition-all">
@@ -350,10 +346,10 @@ export default function ISKCONWebsite() {
             <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-500 rounded-full flex items-center justify-center">
               <Heart fill="white" className="text-white" />
             </div>
-            <h3 className="text-2xl font-bold">ISKCON Movement</h3>
+            <h3 className="text-2xl font-bold">ISKCON EASY</h3>
           </div>
           <p className="text-gray-400 mb-4">Sri Sri Radha Madhav Temple, Kanpur</p>
-          <p className="text-gray-500 text-sm">© 2025 ISKCON Movement. Spreading Krishna Consciousness with Love</p>
+          <p className="text-gray-500 text-sm">© 2025 ISKCON EASY. Spreading Krishna Consciousness with Love</p>
           <p className="text-orange-400 mt-4 font-semibold">Hare Krishna Hare Krishna Krishna Krishna Hare Hare</p>
         </div>
       </footer>
