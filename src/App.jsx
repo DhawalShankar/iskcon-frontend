@@ -367,14 +367,14 @@ export default function ISKCONWebsite() {
       <footer className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center space-x-3 mb-6">
-            {/* <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-pink-500 rounded-full flex items-center justify-center"> */}
+             <div className=" bg-white h-30 w-80  rounded-2xl flex items-center justify-center"> 
               <img
   src="easy-logo.png" 
   alt="Easy Logo"
-  className="h-20 w-60 object-contain"
+  className="h-30 w-75 object-contain"
 />
-            {/* </div> */}
-            <h3 className="text-2xl font-bold">ISKCON EASY</h3>
+            </div>
+           
           </div>
           <p className="text-gray-400 mb-4">Sri Sri Radha Madhav Temple, Kanpur</p>
           <p className="text-gray-500 text-sm">© 2025 ISKCON EASY. Spreading Krishna Consciousness with Love</p>
