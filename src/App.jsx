@@ -115,9 +115,13 @@ export default function ISKCONWebsite() {
                   <span>Join Our Movement</span>
                   <ArrowRight size={20} />
                 </button>
-                <button className="border-2 border-blue-500 text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition-all">
-                  Learn More
-                </button>
+                <button
+  className="border-2 border-blue-500 text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition-all"
+  onClick={() => window.open('https://pages.razorpay.com/YWCK', '_blank', 'noopener,noreferrer')}
+>
+  Donate
+</button>
+
               </div>
             </div>
 
